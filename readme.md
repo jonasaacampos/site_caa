@@ -22,10 +22,18 @@ python manage.py migrate
 python manage.py createsuperuser
 
 
-
 ```
 
 Sequencia de criação
 
- 1. Models
+1. Models
 
+
+
+
+
+### Chaves ssh git hub
+
+- [Gerando uma nova chave SSH e adicionando-a ao agente SSH](https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+- Copiar a chave (git bash > `cat git.pub` ou `clip < git.pub`)
+- [Settings > SSH Keys](https://github.com/settings/keys)
