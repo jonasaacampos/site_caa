@@ -43,5 +43,6 @@ Sequencia de criação
 
 - `:notebook: doc: documentação`
 - `:star: feat: describe feat...`
+- 
 
 parei #A027
