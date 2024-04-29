@@ -42,4 +42,6 @@ Sequencia de criação
 ### Documentation
 
 - `:notebook: doc: documentação`
-- `:star: feat: describe field`
+- `:star: feat: describe feat...`
+
+parei #A027
