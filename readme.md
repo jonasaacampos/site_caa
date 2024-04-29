@@ -43,6 +43,6 @@ Sequencia de criação
 
 - `:notebook: doc: documentação`
 - `:star: feat: describe feat...`
-- 
+- `:recycle: refatc: ...`
 
 parei #A027
