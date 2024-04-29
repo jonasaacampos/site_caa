@@ -1,4 +1,8 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the people index.")
+from people.models import People
+
+def people(request):
+    people = People.objects.all()
+
+    return render(request, "people.html", context={"people": people})
