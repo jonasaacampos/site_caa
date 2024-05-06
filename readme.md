@@ -24,13 +24,21 @@ python manage.py createsuperuser
 
 ```
 
-Sequencia de criação
+### Sequencia de criação
 
-1. Models
+
+1. Settings
+   1. Configurar arquivos estáticos
+   2. Configurar Media settings
+   3. Configurar Internacionalização
+   4. Inserir novos apps criados
+2. Models
    1. Criar classe
-2. Admin
+3. Admin
    1. Criar classe
    2. registrar admin
+4. app
+   1. settings.py: inserir novos apps criados
 
 
 ### Chaves ssh git hub
