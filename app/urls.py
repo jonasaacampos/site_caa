@@ -11,8 +11,11 @@ from django.conf.urls.static import static
 
 # views
 from people.views import people
+from documents.views import iframe_documents_view
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("people/", people),
+    path("diretoria/", people),
+    path("documentos/", iframe_documents_view),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
