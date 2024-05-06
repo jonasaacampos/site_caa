@@ -14,5 +14,5 @@ from people.views import people
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('people/', people),
+    path("people/", people),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

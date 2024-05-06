@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- TEAM -->
+<section id="diretoria">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12 col-sm-12">
+                <div class="section-title">
+                    <h2>Diretoria <small>Conheça nossa diretoria</small></h2>
+                </div>
+            </div>
+
+            {% for person in people %}
+            <div class="col-md-3 col-sm-6">
+                <div class="team-thumb">
+                    <div class="team-image">
+                        <img src="{{ person.photo.url }}" class="img-responsive" alt="">
+                    </div>
+                    <div class="team-info">
+                        <h3>{{ person.name }}</h3>
+                        <span>{{ person.board_position }}</span>
+                    </div>
+
+                    <ul class="social-icon">
+                        <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                        <li><a href="#" class="fa fa-instagram"></a></li>
+                        <li><a href="#" class="fa">&#xf0e0;</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            {% endfor %}
+
+
+
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
