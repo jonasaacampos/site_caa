@@ -41,6 +41,16 @@ python manage.py createsuperuser
    1. settings.py: inserir novos apps criados
 
 
+### Editor Rich Text
+
+`pip install django-ckeditor`
+
+https://pypi.org/project/django-ckeditor
+
+https://www.youtube.com/watch?v=YsgCGsTF5eg
+
+*adicionado rich text no campo horário de funcionamento, no rodapé do site*
+
 ### Chaves ssh git hub
 
 - [Gerando uma nova chave SSH e adicionando-a ao agente SSH](https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)

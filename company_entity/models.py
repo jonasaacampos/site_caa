@@ -1,8 +1,10 @@
 from django.db import models
+from django_ckeditor_5.fields import CKEditor5Field
+from ckeditor.fields import RichTextField
 
 
 class Company(models.Model):
-    
+
     # Dados Gerais
     id = models.AutoField(primary_key=True)
     logo = models.ImageField(
@@ -10,7 +12,7 @@ class Company(models.Model):
     )
     company_name = models.CharField(max_length=100, verbose_name="Nome da Empresa")
     trade_name = models.CharField(max_length=100, verbose_name="Nome Fantasia")
-    
+
     # Registros da empresa
     cnpj = models.CharField(max_length=14, verbose_name="CNPJ")
     state_registration = models.CharField(
@@ -33,10 +35,18 @@ class Company(models.Model):
     website = models.URLField(
         max_length=100, verbose_name="Website", null=True, blank=True
     )
-    social_media_facebook = models.URLField(blank=True, null=True, verbose_name="Facebook") 
-    social_media_instagram = models.URLField(blank=True, null=True, verbose_name="Instagram") 
-    social_media_whatsapp = models.URLField(blank=True, null=True, verbose_name="WhatsApp") 
-    social_media_linkedin = models.URLField(blank=True, null=True, verbose_name="Linkedin") 
+    social_media_facebook = models.URLField(
+        blank=True, null=True, verbose_name="Facebook"
+    )
+    social_media_instagram = models.URLField(
+        blank=True, null=True, verbose_name="Instagram"
+    )
+    social_media_whatsapp = models.URLField(
+        blank=True, null=True, verbose_name="WhatsApp"
+    )
+    social_media_linkedin = models.URLField(
+        blank=True, null=True, verbose_name="Linkedin"
+    )
 
     # Dados Complementares
     opening_date = models.DateField(
@@ -70,16 +80,19 @@ class Company(models.Model):
 class SiteFooter(models.Model):
     id = models.AutoField(primary_key=True)
     main_footer = models.BooleanField(
-        editable=True, default=True, verbose_name="Rodapé Principal"
+        editable=True,
+        default=True,
+        unique=True,
+        verbose_name="Rodapé Principal",
+        help_text="Marque para definir como rodapé principal do site",
+        error_messages={"unique": "Já existe um rodapé principal definido"},
     )
     name = models.CharField(
         max_length=100,
         default="Rodapé padrão do site",
         verbose_name="Nome do rodapé (controle interno)",
     )
-    service_hours = models.CharField(
-        max_length=100, verbose_name="Horário de Atendimento"
-    )
+    service_hours = RichTextField(max_length=200, verbose_name="Horário de Atendimento")
     line_text1 = models.CharField(max_length=200, verbose_name="Texto da Linha 1")
     line_text2 = models.CharField(max_length=200, verbose_name="Texto da Linha 2")
 
