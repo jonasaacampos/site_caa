@@ -17,15 +17,15 @@
                 </div>
             </div>
 
-            {% for person in people %}
+            {% for member in diretoria %}
             <div class="col-md-3 col-sm-6">
                 <div class="team-thumb">
                     <div class="team-image">
-                        <img src="{{ person.photo.url }}" class="img-responsive" alt="">
+                        <img src="{{ member.photo.url }}" class="img-responsive" alt="">
                     </div>
                     <div class="team-info">
-                        <h3>{{ person.name }}</h3>
-                        <span>{{ person.board_position }}</span>
+                        <h3>{{ member.name }}</h3>
+                        <span>{{ member.board_position }}</span>
                     </div>
 
                     <ul class="social-icon">
