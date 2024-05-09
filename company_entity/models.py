@@ -10,11 +10,15 @@ class Company(models.Model):
     logo = models.ImageField(
         upload_to="company_entity/logos", verbose_name="Logo", null=True, blank=True
     )
-    company_name = models.CharField(max_length=100, verbose_name="Nome da Empresa")
+    company_name = models.CharField(max_length=100, verbose_name="Razão Social")
     trade_name = models.CharField(max_length=100, verbose_name="Nome Fantasia")
 
+    is_active = models.BooleanField(
+        blank=False, null=False, default=True, verbose_name="Ativo"
+    )
+
     # Registros da empresa
-    cnpj = models.CharField(max_length=14, verbose_name="CNPJ")
+    cnpj = models.CharField(max_length=14, verbose_name="CNPJ", null=True, blank=True)
     state_registration = models.CharField(
         max_length=20, verbose_name="Inscrição Estadual", null=True, blank=True
     )
@@ -61,6 +65,8 @@ class Company(models.Model):
     responsible_name = models.CharField(
         max_length=100, verbose_name="Nome do Responsável", null=True, blank=True
     )
+    cpf = models.CharField(max_length=14, verbose_name="CPF", null=True, blank=True)
+
     notes = models.TextField(verbose_name="Observações", null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Criado em")
     updated_at = models.DateTimeField(
@@ -103,3 +109,28 @@ class SiteFooter(models.Model):
         verbose_name = "Rodapé do Site"
         verbose_name_plural = "Rodapés do Site"
         ordering = ["id"]
+
+
+class Partner(Company):
+    PARTNER_TYPES = {"1": "Parceiro", "2": "Fornecedor"}
+    PARTNER_TYPES_PERSON = {"1": "Pessoa Jurídica", "2": "Pessoa Física"}
+    role = models.CharField(
+        max_length=1,
+        choices=PARTNER_TYPES.items(),
+        verbose_name="Tipo de Parceiro",
+        default="1",
+    )
+
+    partner_type = models.CharField(
+        max_length=1,
+        choices=PARTNER_TYPES_PERSON.items(),
+        verbose_name="Natureza do Parceiro",
+        default="1",
+    )
+
+    class Meta:
+        # proxy = True
+        verbose_name = "Parceiro"
+        verbose_name_plural = "Parceiros"
+        ordering = ["id"]
+        app_label = "company_entity"

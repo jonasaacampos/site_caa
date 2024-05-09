@@ -51,6 +51,9 @@ https://www.youtube.com/watch?v=YsgCGsTF5eg
 
 *adicionado rich text no campo horário de funcionamento, no rodapé do site*
 
+
+
+
 ### Chaves ssh git hub
 
 - [Gerando uma nova chave SSH e adicionando-a ao agente SSH](https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
@@ -62,6 +65,7 @@ https://www.youtube.com/watch?v=YsgCGsTF5eg
 - `:notebook: doc: documentação`
 - `:star: feat: describe feat...`
 - `:recycle: refatc: ...`
+
 
 parei #A027
 
