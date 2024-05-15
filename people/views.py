@@ -22,3 +22,4 @@ class Diretoria(ListView):
         only_board_members = super().get_queryset().filter(team__name="Diretoria").all()
         return only_board_members
 
+

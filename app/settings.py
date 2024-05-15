@@ -38,11 +38,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "ckeditor",
     "people",
     "documents",
     "company_entity",
-    "ckeditor",
     "home_page",
+
 ]
 
 MIDDLEWARE = [
@@ -71,6 +72,7 @@ TEMPLATES = [
                 ## APP CONTEXT PROCESSORS
                 "app.context_processors.context_company",
                 "app.context_processors.context_footer",
+                "app.context_processors.context_header_banner",
             ],
         },
     },

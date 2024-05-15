@@ -21,8 +21,11 @@ python manage.py migrate
 # criar superuser
 python manage.py createsuperuser
 
-
 ```
+
+### Sintaxes do Django
+
+No Django template language, a sintaxe correta para acessar o primeiro elemento de uma lista é colocar o índice antes do atributo. Portanto, você deve usar `{{ header_banner.0.title }}` em vez de `{{ header_banner.title[0] }}`.
 
 ### Sequencia de criação
 

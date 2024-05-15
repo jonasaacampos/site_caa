@@ -381,17 +381,38 @@ https://templatemo.com/tm-516-known
   .caption h3 a { color: #FFF; }
   .caption h3 a:hover { color: #FF3; }
 
-  .home-slider .item-first {
-    background-image: url(../images/slider-image1.jpg);
+  /* .home-slider .item-first {
 	background-position: center;
   }
 
   .home-slider .item-second {
-    background-image: url(../images/slider-image2.jpg);
+    background-position: center;
   }
 
   .home-slider .item-third {
-    background-image: url(../images/slider-image3.jpg);
+    background-position: center;
+  } */
+
+  .banner-dots {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+  
+  .banner-dot {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  
+  .banner-dot.active {
+    opacity: 1;
   }
 
 

@@ -1,0 +1,43 @@
+<section id="home">
+     <div class="row">
+
+          <div class="owl-carousel owl-theme home-slider">
+
+               {% for banner in header_banner %}
+
+               <div
+                    class="item {% if forloop.counter == 1 %}
+                    item-first
+                    {% elif forloop.counter == 2 %}
+                    item-second
+                    {% elif forloop.counter == 3 %}
+                    item-third
+                    {% endif %}" style="background-image: url('{{ banner.image_url }}');"
+               >
+                 
+                    <div class="caption">
+                         <div class="container">
+                              <div class="col-md-6 col-sm-12">
+                                   <h1>{{ banner.title }}</h1>
+                                   <h3>{{ banner.description }}</h3>
+                                   <a href="{{banner.button_link}}" class="section-btn btn btn-default smoothScroll">{{ banner.call_to_action_button_text }}</a>
+                              </div>
+                         </div>
+                    </div>
+               </div>             
+
+               {% endfor %}
+
+               {% comment %}               
+               <div class="banner-dots">
+                    {% for banner in header_banner %}
+                        <span class="banner-dot" data-banner-id="{{ forloop.counter }}"></span>
+                    {% endfor %}
+               </div>  
+               {% endcomment %}
+
+             
+          </div>
+
+     </div>
+</section>

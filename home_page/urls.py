@@ -1,7 +1,8 @@
 from django.urls import path
-from . import views
+from home_page.views import BannerView, index
 
 
 urlpatterns = [
-    path("",  views.index, name="index")
+    path("",  index, name="index"),
+    path("", BannerView.as_view(), name="header_banner"),
     ]
