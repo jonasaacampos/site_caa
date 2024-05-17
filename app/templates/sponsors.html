@@ -1,0 +1,19 @@
+<!-- Sponsors -->
+<section id="courses">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="section-title">
+          <h2>APOIADORES <small>Estes são algumas das empresas que contribuem para que continuemos o nosso trabalho.</small></h2>
+        </div>
+
+        <div class="col-6 col-md-3 align-self-center text-center">
+          {% for p in partner %}
+            <img src="{{ p.logo_url }}" alt="{{ p.name }}" height="75" width="75" />
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

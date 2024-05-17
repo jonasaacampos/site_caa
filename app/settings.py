@@ -73,6 +73,7 @@ TEMPLATES = [
                 "app.context_processors.context_company",
                 "app.context_processors.context_footer",
                 "app.context_processors.context_header_banner",
+                "app.context_processors.context_partner",
             ],
         },
     },

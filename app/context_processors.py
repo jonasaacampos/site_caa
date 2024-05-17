@@ -1,4 +1,4 @@
-from company_entity.models import Company, SiteFooter
+from company_entity.models import Company, SiteFooter, Partner
 from home_page.models import HeaderBanner
 
 ####################
@@ -14,6 +14,11 @@ def context_footer(request):
     footer = SiteFooter.objects.filter(main_footer=True).first()
     return {'footer': footer}
 
+def context_partner(request):
+    partner = Partner.objects.all()
+    print(partner)
+    return {'partner': partner}
+
 #############
 # home_page #
 #############
@@ -21,3 +26,4 @@ def context_footer(request):
 def context_header_banner(request):
     header_banner = HeaderBanner.objects.all()
     return {'header_banner': header_banner}
+

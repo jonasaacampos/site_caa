@@ -77,6 +77,13 @@ class Company(models.Model):
     def __str__(self):
         return self.company_name
 
+    @property
+    def logo_url(self):
+        if self.logo and hasattr(self.logo, "url"):
+            return self.logo.url
+        else:
+            return ""
+
     class Meta:
         verbose_name = "Empresa"
         verbose_name_plural = "Empresas"
